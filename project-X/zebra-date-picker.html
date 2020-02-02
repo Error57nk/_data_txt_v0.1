@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- all needed -->
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="CSS/fontawesome.min.css">
+  <link rel="stylesheet" href="CSS/jquery.fancybox.min.css"> -->
+
+
+
+  <!-- this model file style -->
+
+  <link rel="stylesheet" href="lib/zebra/zebra_datepicker.min.css">
+
+  <title>Zebra-Date-Picker || Project Nick</title>
+</head>
+
+<body>
+  <a href="index.html"><button>HOME</button></a>
+  <div class="jumbotron text-center">
+    <h3>You need Jquerry Library(dependent in this version 3.4.1), zebra_datepicker.mim.css & zebra_datepicker.mim.js
+    </h3>
+
+
+    <h2>Date-Picker</h2>
+  </div>
+  <div class="mt-10"></div>
+
+  <!-- main-section -->
+  <div class="container">
+
+    <h2>Single and Future</h2>
+    <form action="">
+      <div class="form-group">
+        <input type="text" id="datepicker-2" class="form-control">
+      </div>
+    </form>
+
+
+    <h2>Date And Time</h2>
+    <form action="">
+      <div class="form-group">
+        <input type="text" id="datepicker-date-time" class="form-control">
+      </div>
+    </form>
+
+
+    <!-- ---------------------------------------------------------------------------------------------- -->
+
+    <h2>double date sort b/w time</h2>
+    <form action="">
+      <div class="form-group">
+        <input type="text" id="datepicker-range-start" class="form-control">
+        <input type="text" id="datepicker-range-end" class="form-control">
+      </div>
+    </form>
+
+
+    <!-- ---------------------------------------------------------------------------------------------- -->
+    <h2>DAte format</h2>
+    <form action="">
+      <div class="form-group">
+        <input type="text" id="datepicker-format" class="form-control">
+
+        <!--  Accepts the following characters for date formatting: d, D, j, l, N, w, S, F, m, M, n, Y, y, h, H, g, G, i, s, a, A, borrowing the syntax from PHP's date function.
+If format property contains time-related characters (g, G, h, H, i, s, a, A), the time picker will be automatically enabled.
+Note that when setting a date format without days (d, j), the users will be able to select only years and months, and when setting a format without months and days (F, m, M, n, t, d, j), the users will be able to select only years. Similarly, setting a format that contains only time-related characters, will result in users being able to only select time. -->
+
+
+      </div>
+    </form>
+
+
+    <!-- ---------------------------------------------------------------------------------------------- -->
+
+  </div>
+
+  <script src="Js/JQuerry.js"></script> <!-- jQuery JavaScript Library v3.4.1 -->
+
+  <script src="Js/bootstrap.min.js"></script>
+  <!-- <script src="Js/fontawesome.min.js"></script>
+  <script src="Js/jquery.fancybox.min.js"></script> -->
+
+  <!-- This mopdule -->
+  <script src="lib/zebra/zebra_datepicker.min.js"></script>
+
+  <script>
+    $('#datepicker-2').Zebra_DatePicker({
+      direction: 1
+    });</script>
+
+
+
+  <!-- date And time -->
+  <script>
+    $('#datepicker-date-time').Zebra_DatePicker({
+      format: 'Y-m-d H:i'
+    });</script>
+</body>
+
+
+<!-- double date sort b/w time -->
+<script>
+  $('#datepicker-range-start').Zebra_DatePicker({
+    direction: true,
+    pair: $('#datepicker-range-end')
+  });
+
+  $('#datepicker-range-end').Zebra_DatePicker({
+    direction: 1
+  });</script>
+
+<!-- format date -->
+<script>$('#datepicker-format').Zebra_DatePicker({
+    // format: 'd ,m, Y' // gives as  1, 3, 2020
+    format: 'D ,m, Y'   //gives as Mon ,7,2020
+    // format: 'd ,M, Y' //gives as 12 march 2020
+  });</script>
+
+</html>

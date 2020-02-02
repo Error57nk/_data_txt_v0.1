@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+
+
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+
+  <!-- this model required -->
+
+  <link rel="stylesheet" href="lib/jquerry-ui-callender/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+
+
+
+</head>
+<a href="index.html"><button>HOME</button></a>
+<div class="jumbotron text-center">
+  <h3>All files in lib </h3>
+  <h2>Date-Picker jquery Ui</h2>
+</div>
+
+<body class="container">
+
+
+
+  <form action="">
+    <div class="form-group">
+      <input type="text" id="datepicker-2" placeholder="Date" class="form-control">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-calender"></i></span>
+    </div>
+  </form>
+
+
+
+  <form action="">
+    <div class="form-group">
+      <input type="text" class="form-control" id="datepicker" placeholder="Date">
+    </div>
+  </form>
+
+  <script src="Js/JQuerry.js"></script>
+  <!-- or  -->
+  <!-- <script src="lib/jquerry-ui-callender/jquerry.js"></script> -->
+
+
+  <script src="lib/jquerry-ui-callender/jquerry-ui.js"></script>
+
+  <script src="Js/bootstrap.min.js"></script>
+
+  <script>
+    $(function () {
+      $("#datepicker").datepicker();
+    });
+  </script>
+
+
+  <script>
+    $(function () {
+      $("#datepicker-2").datepicker();
+    });
+  </script>
+</body>
+
+</html>
